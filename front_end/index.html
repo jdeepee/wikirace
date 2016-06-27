@@ -55,15 +55,24 @@
         </div>
     </div>
 
-    <form id="form">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+    <form role="form" id="form" class="form-inline">
+      <div class="form-group">
       <input type="text" id="word1">
+    </div>
+    <div class="form-group">
       <input type="text" id="word2">
+    </div>
+    
+    <button type="submit" class="btn btn-default" id="submit">Submit</button>
     </form>
-    <button type="button" id="submit">Submit</button>
 
     <div id="load_div"><p id="loading"></p></div>
 
     <div id="response_div"></div>
+  </div>
+   </div> 
 
 </div>
 </body>
