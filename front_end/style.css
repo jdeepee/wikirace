@@ -1,5 +1,14 @@
 body#my_container {
   
-  background-color: #d9d9d9 !important;
+  background-color: #d9d9d9;
+
+  vertical-align: middle;
   
+}
+
+.vcenter {
+ position: absolute;
+ top: 45%;
+ left:50%;
+ transform: translate(-50%,-50%);
 }
