@@ -4,26 +4,20 @@
 
 <!-- commando css -->
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="css/bootstrap-theme.css">
-
 <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
 <!-- template css -->
 <link rel="stylesheet" href="bootstrap.css">
-
 <!-- Optional theme -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
 <!-- Latest compiled and minified JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
 </head>
+
 <body id="my_container">
 <div class="container" >
     <div class="row">
@@ -31,6 +25,7 @@
             <h1>The Wikirace Search</h1>
 
             <div id="fb-root"></div>
+
             <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
               if (d.getElementById(id)) return;
@@ -38,9 +33,13 @@
               js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+            <!-- Your like button code -->
+            <div class="fb-like" data-href="http://www.your-domain.com/your-page.html" data-layout="standard" data-action="like" data-show-faces="true">
+    </div>
 
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-4 col-md-offset-3">
             <form action="" class="search-form">
@@ -52,6 +51,17 @@
             </form>
         </div>
     </div>
+
+    <form id="form">
+      <input type="text" id="word1">
+      <input type="text" id="word2">
+    </form>
+    <button type="button" id="submit">Submit</button>
+
+    <div id="load_div"><p id="loading"></p></div>
+
+    <div id="response_div"></div>
+
 </div>
 </body>
 </html>
