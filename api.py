@@ -3,15 +3,15 @@ from threading import Thread
 from flask_socketio import SocketIO, emit, send, join_room, rooms, disconnect
 from MySQLdb import connect
 
-# cnx = connect(user='root',
-#               passwd='wikiracetea',
-#               host='cp-0627-1.hbtn.io',
-#               port=3306,
-#               db='wikirace',
-#               charset='utf8',
-#               )
-#
-# cursor = cnx.cursor()
+cnx = connect(user='root',
+              passwd='wikiracetea',
+              host='cp-0627-1.hbtn.io',
+              port=3306,
+              db='wikirace',
+              charset='utf8',
+              )
+
+cursor = cnx.cursor()
 
 add_data = ("INSERT INTO Requests "
                "(id, first_word, second_word) "
@@ -38,8 +38,8 @@ def hello(data):
     t = Thread(target=get_path, args=(data, finished))
     t.start()
 
-    # data = (data['id'], data['first_word'], data['second_word'])
-    # cursor.execute(add_data, data)
+    data = (data['id'], data['first_word'], data['second_word'])
+    cursor.execute(add_data, data)
 
 def get_path(data, finished):
     path = [
