@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on("loaded", function() {
+      console.log("loaded adsfadsfasdfadf");
+    });
+    socket.on("done", function(msg) {
+      console.log(msg);
+    });
+    var hello = {"id": "asDFasDF12", "word_1": "Flask", "word_2": "Sockets", }
+    socket.emit("hello", hello);
+  });
+  </script>
+</head>
+<body>
+  <div>Hello</div>
+</body>
+</html>
